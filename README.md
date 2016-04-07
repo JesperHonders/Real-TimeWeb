@@ -9,12 +9,12 @@ Ik ga gebruik maken van de volgende databron: https://www.knvbdataservice.nl
 Ik heb contact opgenomen met de KNVB en ik heb een maand gratis toegang gekregen tot hun API. Met deze API heb ik toegang tot allerlei informatie over alles rondom het voetbal in Nederland.
 
 Ik heb onder andere toegang tot:
-*Teams
-*Uitslagen
-*Programma
-*Stand 
-*Wedstrijden
-*Competities
+* Teams
+* Uitslagen
+* Programma
+* Stand 
+* Wedstrijden
+* Competities
 
 De data is heel erg betrouwbaar aangezien de KNVB een officiele organisatie is.
 
