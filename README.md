@@ -25,3 +25,11 @@ Ik wil de data van mijn eigen voetbal team verzamelen om voor mij en mijn teamge
 ### Minimal Viable Product
 
 Een app specifiek voor mijn eigen team TOS Actief die bestaat uit 3 tabs: Programma, Stand & Uitslagen.
+
+### Reactivness
+
+Ik wil dat spelers in kunnen loggen om aan te geven of ze aanwezig of afwezig zijn voor bij een wedstrijd. Zo wordt voor iedereen inzichtelijk of er genoeg spelers zijn elke wedstrijd.
+
+### Wishlist
+
+Dat opkomst voor trainingen bijgehouden kunnen worden en een gedeelte waar de financien van het team bijgehouden kunnen worden.
