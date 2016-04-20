@@ -1,0 +1,1 @@
+soccerDB = new Mongo.Collection('matches');
