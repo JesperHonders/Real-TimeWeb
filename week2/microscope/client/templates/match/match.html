@@ -1,0 +1,25 @@
+<template name="match">
+  <div class="container">
+    <h1>{{match.name}}</h1>
+    <h4>Opponent: {{match.opponent}}</h4>
+    <h4>Time: {{match.time}}</h4>
+    <h4>Date: {{match.date}}</h4>
+
+    <tbody> 
+      {{#each match}}
+        <tr>
+          <td>{{home_away}}</td> 
+          <th>{{opponent}}</th> 
+          <td>{{time}}</td> 
+          <td>{{date}}</td>
+        </tr> 
+      {{/each}}
+    </tbody>
+
+    {{#if currentUser}}
+      <button id="attendButton" class="btn btn-primary">Attend match!</button>
+    {{/if}}
+    <p>Players present:</p>
+
+  </div>
+</template>

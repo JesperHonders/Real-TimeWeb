@@ -33,3 +33,14 @@ Ik wil dat spelers in kunnen loggen om aan te geven of ze aanwezig of afwezig zi
 ### Wishlist
 
 Dat opkomst voor trainingen bijgehouden kunnen worden en een gedeelte waar de financien van het team bijgehouden kunnen worden.
+
+# Week 2
+
+### Opdracht 1
+
+Ik heb gekozen voor een duidelijk mappen structuur die client en server scheid. 
+
+* client: hier komt alle code die clientside wordt uitgevoerd.
+* server: hier komt alle code die serverside wordt uitgevoerd.
+* lib: hier komt alle code die zowel clientside als serverside worden uitgevoerd.
+* public: hier komen alle images.

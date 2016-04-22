@@ -4,9 +4,9 @@ Template.matches.helpers({
 		return soccerDB.find({});
 	},
 	// Returns if user has admin rights
-	adminUser: function(){
-		return this.userId === 'ndZw9CFpoXvBesH6C';
-	}
+	// adminUser: function(){
+	// 	return this.userId === 'ndZw9CFpoXvBesH6C';
+	// }
 });
 
 Template.matches.events({

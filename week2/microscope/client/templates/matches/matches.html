@@ -1,65 +1,66 @@
 <template name="matches">
+	<div class="container">
+		<h2>Add a match</h2>
 
-	<h2>Add a match</h2>
+		{{#if currentUser}}
+			<form class="add-match">
+				<div class="form-group">
+					<label class="radio-inline">
+					  <input type="radio" name="home_away" value="home"> Home
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="home_away" value="away"> Away
+					</label>
+				</div>
+				<div class="form-group">
+					<label for="opponent">Opponent</label>
+		    		<input type="text" class="form-control" id="opponent" placeholder="F.C. Knudde">
+				</div>
+				<div class="form-group">
+					<label for="time">Time</label>
+		    		<input type="text" class="form-control" id="time" placeholder="15:00">
+				</div>
+				<div class="form-group">
+					<label for="date">Date</label>
+		    		<input type="text" class="form-control" id="date" placeholder="19-07-1991">
+				</div>
+				<button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+			</form>
+		{{else}}
+			<p>Please log in to add matches.</p>
+		{{/if}}
+		<hr/>
 
-	{{#if currentUser}}
-		<form class="add-match">
-			<div class="form-group">
-				<label class="radio-inline">
-				  <input type="radio" name="home_away" value="home"> Home
-				</label>
-				<label class="radio-inline">
-				  <input type="radio" name="home_away" value="away"> Away
-				</label>
-			</div>
-			<div class="form-group">
-				<label for="opponent">Opponent</label>
-	    		<input type="text" class="form-control" id="opponent" placeholder="F.C. Knudde">
-			</div>
-			<div class="form-group">
-				<label for="time">Time</label>
-	    		<input type="text" class="form-control" id="time" placeholder="15:00">
-			</div>
-			<div class="form-group">
-				<label for="date">Date</label>
-	    		<input type="text" class="form-control" id="date" placeholder="19-07-1991">
-			</div>
-			<button type="submit" value="Submit" class="btn btn-default">Submit</button>
-		</form>
-	{{else}}
-		<p>Please log in to add matches.</p>
-	{{/if}}
-	<hr/>
+		<h2>Upcoming matches</h2>
 
-	<h2>Upcoming matches</h2>
-
-	<div class="table-responsive"> 
-		<table class="table"> 
-			<thead> 
-				<tr>  
-					<th>Home/Away</th> 
-					<th>Opponent</th> 
-					<th>Time</th> 
-					<th>Date</th> 
-					{{#if adminUser}}
-						<th></th> 
-					{{/if}}
-				</tr> 
-			</thead> 
-			<tbody> 
-				{{#each matches}}
-					<tr>
-						<td>{{home_away}}</td> 
-						<th>{{opponent}}</th> 
-						<td>{{time}}</td> 
-						<td>{{date}}</td>
-						{{#if adminUser}} 
-							<td><a href="#" class="delete-match">Delete</a></td> 
+		<div class="table-responsive"> 
+			<table class="table"> 
+				<thead> 
+					<tr>  
+						<th>Home/Away</th> 
+						<th>Opponent</th> 
+						<th>Time</th> 
+						<th>Date</th> 
+						{{#if currentUser}}
+							<th></th> 
 						{{/if}}
 					</tr> 
-				{{/each}}
-			</tbody> 
-		</table> 
-	</div>
+				</thead> 
+				<tbody> 
+					{{#each matches}}
+						<tr>
+							<td>{{home_away}}</td> 
+							<th><a href='/match/{{_id}}'>{{opponent}}</a></th> 
+							<td>{{time}}</td> 
+							<td>{{date}}</td>
+							{{#if currentUser}} 
+								<td><a href="#" class="delete-match">Delete</a></td> 
+							{{/if}}
+						</tr> 
+					{{/each}}
+				</tbody> 
+			</table> 
+		</div>
 
+	</div>
 </template>

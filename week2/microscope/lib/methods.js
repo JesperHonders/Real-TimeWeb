@@ -9,7 +9,7 @@ Meteor.methods({
 			opponent: opponent,
 			time: time,
 			date: date,
-			userId: Meteor.userId()
+			userId: Meteor.userId(),
 		});
 	},
 	deleteMatch: function(matchId){
