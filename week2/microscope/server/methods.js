@@ -14,5 +14,14 @@ Meteor.methods({
 	},
 	deleteMatch: function(matchId){
 		soccerDB.remove(matchId);
+	},
+
+	addPlayerToMatch: function(eventID, userId) {
+		playerDB.insert({
+			eventID: eventID,
+			username: userId,
+			createdAt: new Date()
+		})
+		console.log("added new player to match")
 	}
 });
